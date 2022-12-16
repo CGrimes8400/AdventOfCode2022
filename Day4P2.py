@@ -14,10 +14,19 @@ for line in listLines:
     startSecondPair = int(secondPair.split("-")[0])
     endSecondPair = int(secondPair.split("-")[1])
 
-    if (startFirstPair >= startSecondPair and endFirstPair <= endSecondPair):
+    #if (startFirstPair >= startSecondPair and endFirstPair <= endSecondPair):
+    #    totalCount += 1
+#
+    #elif (startSecondPair >= startFirstPair and endSecondPair <= endFirstPair):
+    #    totalCount += 1
+    
+    if (startSecondPair <= startFirstPair <= endSecondPair):
         totalCount += 1
-
-    elif (startSecondPair >= startFirstPair and endSecondPair <= endFirstPair):
+    elif (startSecondPair <= endFirstPair <= endSecondPair):
+        totalCount += 1
+    elif (startFirstPair <= startSecondPair <= endFirstPair):
+        totalCount += 1
+    elif (startFirstPair <= endSecondPair <= endFirstPair):
         totalCount += 1
 
 print(totalCount)
